@@ -47,23 +47,35 @@
           <br>
 
           <div class="section">
-            <h3>Abstract</h3>
+            <h3>Background</h3>
             <hr>
-            <p>We propose an automatic method for pose and motion estimation against a ground surface for a ground-moving robot-mounted monocular camera. The framework adopts a semi-dense approach that benefits from both a feature-based method and an image-registration-based method by setting multiple patches in the image for displacement computation through a highly accurate image-registration technique. To improve accuracy, we introduce virtual inverse perspective mapping (IPM) in the refinement step to eliminate the perspective effect on image registration. The pose and motion are jointly and robustly estimated by a formulation of geometric bundle adjustment via virtual IPM. Unlike conventional visual odometry methods, the proposed method is free from cumulative error because it directly estimates pose and motion against the ground by taking advantage of a camera configuration mounted on a ground-moving robot where the camera's vertical motion is ignorable compared to its height within the frame interval and the nearby ground surface is approximately flat. We conducted experiments in which the relative mean error of the pitch and roll angles was approximately 1.0 degrees and the absolute mean error of the travel distance was 0.3 mm, even under camera shaking within a short period.</p>
+            <p>移動体に搭載したビジョンを用いた対環境計測は，自動運転や先進運転支援システムにおけるキーテクノロジーである．移動体搭載ビジョンを用いた計測では，移動体や路面に対するイメージセンサの姿勢を正確に把握することが計測性能に直結するため，個体ごとの較正が必要であり，製造プロセスの効率化においてボトルネックとなってきた．さらに走行中の振動による姿勢のダイナミックな変化や較正時からの経年状態変化が性能に悪影響を及ぼす．このため，移動体搭載ビジョンの姿勢や移動量などの状態を高速・高精度かつロバストに把握する技術の開発が求められていた．</p>
+            <p>本研究では，申請者が開発してきた高速ビジョンを用いた近接路面解析技術を応用し，移動体搭載ビジョンの状態を高速かつ高精度に把握するアルゴリズムを構築する．</p>
           </div>
           <br>
           <div class="section">
-            <h3>High-speed Proximity Road Surface Analysis</h3>
+            <h3>How to analyze road texture?</h3>
             <hr>
             <p>
               hogehoge
+              カーペットでベクトル場推定してる動画をつくる
             </p>
+            <div class="row align-items-center">
+              <div class="col justify-content-center text-center">
+                <video width="60%" playsinline="" autoplay="" loop="" preload="" muted="">
+                  <source src="./res/sample-video.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
           </div>
           <br>
           <div class="section">
             <h3>Virtual Inverse Perspective Mapping</h3>
             <hr>
-            <p>Virtual inverse perspective mapping. Consider using mathjax.</p>
+            <p>
+              移動中のイメージセンサの対路面姿勢と移動量を統一的にモデリングした上で, 路面画像を現在の推定量に合わせて逆透視投影変換を行うことにより路面のテクスチャ変化の計測精度を向上させるVirtual Inverse Perspective Mapping(V-IPM)を提案し，幾何バンドル調整の枠組みで最適化を行うことで，上述の量の高精度推定を可能とする手法を開発した．
+            </p>
           </div>
           <br>
           <div class="section">
